@@ -1,10 +1,10 @@
-# 🛠 Errores y Soluciones Encontradas – Semana 3
+#  Errores y Soluciones Encontradas – Semana 3
 
 Este documento detalla los errores encontrados durante el desarrollo de la herramienta CAAT en Python y las soluciones aplicadas para cada uno.
 
 ---
 
-## ❌ Error 1: Conversión de Hora en el archivo de registros
+##  Error 1: Conversión de Hora en el archivo de registros
 
 **Problema:**  
 Al intentar convertir los valores de la columna `Hora` a formato `datetime`, Python generaba un error de formato.
@@ -20,7 +20,7 @@ Se usó `pd.to_datetime(..., format='%H:%M')` para forzar el formato correcto y 
 
 ---
 
-## ❌ Error 2: No detectaba duplicados correctamente
+##  Error 2: No detectaba duplicados correctamente
 
 **Problema:**  
 Al aplicar `.duplicated()` en la columna `Factura` únicamente, algunas duplicaciones no se identificaban correctamente.
@@ -33,7 +33,7 @@ ventas.duplicated(subset=['Factura', 'Fecha'], keep=False)
 
 ---
 
-## ❌ Error 3: No mostraba resultados claros
+##  Error 3: No mostraba resultados claros
 
 **Problema:**  
 Inicialmente, el código solo ejecutaba los filtros pero no mostraba nada en pantalla.
@@ -43,6 +43,6 @@ Se agregaron `print()` estructurados para que cada resultado se visualice claram
 
 ---
 
-## ✅ Resultado
+##  Resultado
 
 El código ahora ejecuta las 5 pruebas correctamente, muestra resultados por consola, y no depende de archivos externos.
